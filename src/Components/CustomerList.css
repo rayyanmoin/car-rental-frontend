@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Dancing+Script&display=swap');
 
 h1 {
-    font-family: 'Dancing Script';
+    font-family: 'times new roman';
     font-size: 25px;
     padding: 10px;
 }
 
 .ag-theme-alpine {
-    font-family: 'Dancing Script';
+    font-family: 'times new roman';
 }
 
 .action-button {
-    font-family: 'Dancing Script';
+    font-family: 'times new roman';
 }

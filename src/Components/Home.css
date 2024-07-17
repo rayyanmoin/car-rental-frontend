@@ -6,7 +6,7 @@
     margin: 0;
     font-size: 100px;
     color: black;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'times new roman', cursive;
 }
 
 
@@ -30,7 +30,7 @@ body {
 } */
 
 body {
-    background-color: orange;
+    background-color: rgba(0, 153, 255, 0.808);
     font-family: 'Great Vibes', cursive;
 }
 

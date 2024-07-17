@@ -5,7 +5,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import axios from "axios";
-import "./QuestionList.css";
+import "./CustomerList.css";
 import { Loading } from "./Loading";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,7 +14,7 @@ const Customers = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/customers/getList");
+      const response = await axios.get("http://localhost:8080/carrentalapi/customers/getList");
       setCustomers(response.data);
     } catch (error) {
       console.error("Error fetching questions:", error);
@@ -26,17 +26,17 @@ const Customers = () => {
   }, []);
 
   const columnDefs = [
-    { headerName: "Customer ID", field: "customerId", width: 105 },
+    { headerName: "Customer ID", field: "customerId", width: 120 },
     { headerName: "CNIC", field: "cnic", width: 150 },
-    { headerName: "Full Name", field: "fullName", width: 150 },
+    { headerName: "Full Name", field: "fullName", width: 120 },
     { headerName: "Email", field: "email", width: 200 },
-    { headerName: "Phone Number", field: "phoneNumber", width: 150 },
-    { headerName: "Address", field: "address", width: 150 },
-    { headerName: "Created At", field: "createdAt", width: 300 },
+    { headerName: "Phone Number", field: "phoneNumber", width: 130 },
+    { headerName: "Address", field: "address", width: 270 },
+    { headerName: "Created At", field: "createdAt", width: 270 },
   ];
 
   return (
-    <div className="ag-theme-alpine" style={{ height: "550px", width: "1000px", margin: "0 auto" }}>
+    <div className="ag-theme-alpine" style={{ height: "550px", width: "1200px", margin: "0 auto" }}>
       {customers.length > 0 ? (
         <>
           <h1>Total Customers: {customers.length}</h1>
