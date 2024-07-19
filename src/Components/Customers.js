@@ -1,57 +1,100 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
-import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-alpine.css";
+import { useState } from "react";
 import axios from "axios";
-import "./CustomerList.css";
-import { Loading } from "./Loading";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./AddUser.css";
 
 const Customers = () => {
-  const [customers, setCustomers] = useState([]);
+	const [customerData, setCustomerData] = useState({
+		cnic: "",
+		fullName: "",
+		email: "",
+		phoneNumber: "",
+		address: "",
+		createdAt: new Date(),
+	});
 
-  const fetchCustomers = async () => {
-    try {
-      const response = await axios.get("http://localhost:8080/carrentalapi/customers/getList");
-      setCustomers(response.data);
-    } catch (error) {
-      console.error("Error fetching questions:", error);
-    }
-  };
+	function hasEmptyValues(obj) {
+		return Object.values(obj).some((value) => value === "" || value === null || value === undefined);
+	}
 
-  useEffect(() => {
-    fetchCustomers();
-  }, []);
+	const notify = () => toast("Customer Created Successfully!", { type: "success" });
+	const notifyError = () => toast("Error While Adding Customer!", { type: "error" });
+	const notifyWarning = () => toast("Please Fill All The Fields!", { type: "warning" });
+	//const notifyPin = () => toast("The Email provided should be having @gmail.com characters!", { type: "warning" });
 
-  const columnDefs = [
-    { headerName: "Customer ID", field: "customerId", width: 120 },
-    { headerName: "CNIC", field: "cnic", width: 150 },
-    { headerName: "Full Name", field: "fullName", width: 120 },
-    { headerName: "Email", field: "email", width: 200 },
-    { headerName: "Phone Number", field: "phoneNumber", width: 130 },
-    { headerName: "Address", field: "address", width: 270 },
-    { headerName: "Created At", field: "createdAt", width: 270 },
-  ];
+	const addCustomer = async () => {
+		console.log(customerData);
+		if (hasEmptyValues(customerData)) {
+			notifyWarning();
+			return;
+		} else {
+			try {
+				const response = await axios.post("http://localhost:8080/carrentalapi/customer/add", customerData);
+				setCustomerData({
+					cnic: "",
+					fullName: "",
+					email: "",
+					phoneNumber: "",
+					address: "",
+				});
+				notify();
+			} catch (error) {
+				notifyError();
+			}
+		}
+	};
 
-  return (
-    <div className="ag-theme-alpine" style={{ height: "550px", width: "1200px", margin: "0 auto" }}>
-      {customers.length > 0 ? (
-        <>
-          <h1>Total Customers: {customers.length}</h1>
-          <AgGridReact
-            columnDefs={columnDefs}
-            rowData={customers}
-            pagination={true}
-            paginationPageSize={10}
-          />
-        </>
-      ) : (
-        <Loading />
-      )}
-    </div>
-  );
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
+		setCustomerData({
+			...customerData,
+			[name]: value,
+		});
+	};
+
+	return (
+		<div>
+			<div className="card">
+				<h2>Create Customer</h2>
+				<div className="form-group">
+					<label htmlFor="cnic" class="required">
+						CNIC
+					</label>
+					<input type="text" id="cnic" name="cnic" value={customerData.cnic} onChange={handleInputChange} />
+				</div>
+				<div className="form-group">
+					<label htmlFor="fullName" class="required">
+						Full Name
+					</label>
+					<input type="text" id="fullName" name="fullName" value={customerData.fullName} onChange={handleInputChange} />
+				</div>
+				<div className="form-group">
+					<label htmlFor="email" class="required">
+						Email
+					</label>
+					<input type="text" id="email" name="email" value={customerData.email} onChange={handleInputChange} />
+				</div>
+				<div className="form-group">
+					<label htmlFor="phoneNumber" class="required">
+						Phone Number
+					</label>
+					<input type="text" id="phoneNumber" name="phoneNumber" value={customerData.phoneNumber} onChange={handleInputChange} />
+				</div>
+				<div className="form-group">
+					<label htmlFor="address" class="required">
+						Address
+					</label>
+					<input type="text" id="address" name="address" value={customerData.address} onChange={handleInputChange} />
+				</div>
+				<button className="submitBtn" type="submit" onClick={addCustomer}>
+					Create Branch
+				</button>
+			</div>
+		</div>
+	);
 };
 
 export default Customers;
