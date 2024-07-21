@@ -59,7 +59,7 @@ export const AddCar = () => {
 			try {
 				const response = await axios.post("http://localhost:8080/carrentalapi/cars/add", carData);
 				setCarData({
-					branchId: 0,
+					branchId: "",
 					make: "",
 					model: "",
 					year: "",

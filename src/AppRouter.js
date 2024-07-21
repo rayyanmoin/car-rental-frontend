@@ -15,12 +15,12 @@ import AddBranch from "./Components/AddBranch.js";
 import { AddLoan } from "./Components/AddLoan.js";
 import { Deposit } from "./Components/Deposit.js";
 import { Withdraw } from "./Components/Withdraw.js";
-import CustomerHelp from "./Components/CustomerHelp.js";
-import { AddCustomerHelp } from "./Components/AddCustomerHelp.js";
 import Maintenance from "./Components/Maintenance.js";
 import Reservation from "./Components/Reservation.js";
 import Customers from "./Components/Customers.js";
 import AddCar from "./Components/AddCar.js";
+import AddMaintenance from "./Components/AddMaintenance.js";
+
 const AppRouter = () => {
 	return (
 		<Router>
@@ -41,11 +41,10 @@ const AppRouter = () => {
 				<Route path="/addCustomer" element={<Customers />} />
 				<Route path="/addCar" element={<AddCar />} />
 				<Route path="/maintenance" element={<Maintenance />} />
+				<Route path="/addMaintenance" element={<AddMaintenance />} />
 				<Route path="/reservation" element={<Reservation />} />
 				<Route path="/deposit" element={<Deposit />} />
 				<Route path="/withdraw" element={<Withdraw />} />
-				<Route path="/customerHelps" element={<CustomerHelp />} />
-				<Route path="/addCustomerHelp" element={<AddCustomerHelp />} />
 			</Routes>
 		</Router>
 	);
