@@ -20,6 +20,7 @@ import Reservation from "./Components/Reservation.js";
 import Customers from "./Components/Customers.js";
 import AddCar from "./Components/AddCar.js";
 import AddMaintenance from "./Components/AddMaintenance.js";
+import AddReservation from "./Components/AddReservation.js";
 
 const AppRouter = () => {
 	return (
@@ -27,7 +28,7 @@ const AppRouter = () => {
 			<Navbar />
 			<ToastContainer
 				toastStyle={{
-					fontFamily: "Dancing Script",
+					fontFamily: "Arial",
 				}}
 			/>
 			<Routes>
@@ -42,6 +43,7 @@ const AppRouter = () => {
 				<Route path="/addCar" element={<AddCar />} />
 				<Route path="/maintenance" element={<Maintenance />} />
 				<Route path="/addMaintenance" element={<AddMaintenance />} />
+				<Route path="/addReservation" element={<AddReservation />} />
 				<Route path="/reservation" element={<Reservation />} />
 				<Route path="/deposit" element={<Deposit />} />
 				<Route path="/withdraw" element={<Withdraw />} />

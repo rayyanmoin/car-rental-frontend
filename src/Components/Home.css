@@ -6,7 +6,7 @@
     margin: 0;
     font-size: 100px;
     color: black;
-    font-family: 'times new roman', cursive;
+    font-family: 'Arial', cursive;
 }
 
 
@@ -30,12 +30,20 @@ body {
 } */
 
 body {
-    background-color: rgba(0, 153, 255, 0.808);
-    font-family: 'Great Vibes', cursive;
+    background-color: rgba(54, 88, 110, 0.808);
+    font-family: 'Arial', cursive;
+    background-image: url('D:\CarRentalApp-Frontend\car-rental-frontend\public\img.jpg');
+    background-size: 100%;
+}
+
+.hello{
+    color: white;
+    padding-top: 80px;
+    font-size: 50px;
 }
 
 nav {
     background-color: white;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Arial', cursive;
     color: black;
 }

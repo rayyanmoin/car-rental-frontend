@@ -9,7 +9,7 @@
     width: 400px;
     margin: auto;
     margin-top: 50px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', cursive;
 }
 
 .form-group {
@@ -30,7 +30,7 @@
     border-radius: 4px;
     font-size: 14px;
     color: #333333;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', cursive;
 }
 
 .form-group input[type="number"] {
@@ -40,7 +40,7 @@
     border-radius: 4px;
     font-size: 14px;
     color: #333333;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', cursive;
 }
 
 .form-group textarea {
@@ -52,24 +52,24 @@
     border-radius: 4px;
     font-size: 14px;
     color: #333333;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', cursive;
 }
 
 .form-group textarea:focus {
     outline: none;
-    border-color: #007bff;
+    border-color:rgba(54, 88, 110, 0.808);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .form-group input[type="text"]:focus {
     outline: none;
-    border-color: #007bff;
+    border-color:rgba(54, 88, 110, 0.808);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .form-group input[type="number"]:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: rgba(54, 88, 110, 0.808);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
@@ -79,21 +79,21 @@
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #2e6ac9;
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', cursive;
 }
 
 .submitBtn:hover {
-    background-color: #0056b3;
+    background-color: #0c59d4;
 }
 
 .required::after {
     content: ' *';
-    color: red;
+    color:rgba(54, 88, 110, 0.808);
 }
 
 select {
@@ -103,11 +103,11 @@ select {
         border-radius: 4px;
         font-size: 14px;
         color: #333333;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', cursive;
 }
 
 select:focus {
     outline: none;
-        border-color: #007bff;
+        border-color:#2e6ac9;
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
