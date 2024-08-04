@@ -85,11 +85,11 @@ export const AddCar = () => {
 
 	return (
 		<div>
-			<div className="card">
+			<div className="cards">
 				<h2>Create Car</h2>
 
-				<div className="form-group">
-					<label htmlFor="branchId" class="required">
+				<div className="form-groups">
+					<label htmlFor="branchId" class="requireds">
 						Branch Names
 					</label>
 					<select id="statusOption" name="branchId" value={replaceBranchWithId(carData.branchId)} onChange={handleInputChange}>
@@ -101,38 +101,44 @@ export const AddCar = () => {
 						))}
 					</select>
 				</div>
-				<div className="form-group">
-					<label htmlFor="make" class="required">
+				<div className="form-groups">
+					<label htmlFor="make" class="requireds">
 						Make
 					</label>
 					<input type="text" id="make" name="make" value={carData.make} onChange={handleInputChange} />
 				</div>
-				<div className="form-group">
-					<label htmlFor="model" class="required">
+				<div className="form-groups">
+					<label htmlFor="model" class="requireds">
 						Model
 					</label>
 					<input type="text" id="model" name="model" value={carData.model} onChange={handleInputChange} />
 				</div>
-				<div className="form-group">
-					<label htmlFor="year" class="required">
+				<div className="form-groups">
+					<label htmlFor="year" class="requireds">
 						Year
 					</label>
 					<input type="text" id="year" name="year" value={carData.year} onChange={handleInputChange} />
 				</div>
-				<div className="form-group">
-					<label htmlFor="color" class="required">
+				<div className="form-groups">
+					<label htmlFor="color" class="requireds">
 						Color
 					</label>
 					<input type="text" id="color" name="color" value={carData.color} onChange={handleInputChange} />
 				</div>
-				<div className="form-group">
-					<label htmlFor="licensePlate" class="required">
+				<div className="form-groups">
+					<label htmlFor="licensePlate" class="requireds">
 						License Plate
 					</label>
 					<input type="text" id="licensePlate" name="licensePlate" value={carData.licensePlate} onChange={handleInputChange} />
 				</div>
-				<div className="form-group">
-					<label htmlFor="status" className="required">
+				<div className="form-groups">
+					<label htmlFor="dailyRentalRate" class="requireds">
+						daily Rental Rate
+					</label>
+					<input type="text" id="dailyRentalRate" name="dailyRentalRate" value={carData.dailyRentalRate} onChange={handleInputChange} />
+				</div>
+				<div className="form-groups">
+					<label htmlFor="status" className="requireds">
 						Status
 					</label>
 					<select id="statusOption" name="status" value={carData.status} onChange={handleInputChange}>
@@ -145,13 +151,7 @@ export const AddCar = () => {
 					</select>
 				</div>
 
-				<div className="form-group">
-					<label htmlFor="dailyRentalRate" class="required">
-						daily Rental Rate
-					</label>
-					<input type="text" id="dailyRentalRate" name="dailyRentalRate" value={carData.dailyRentalRate} onChange={handleInputChange} />
-				</div>
-				<button className="submitBtn" type="submit" onClick={AddCar}>
+				<button className="submitBtns" type="submit" onClick={AddCar}>
 					Create Car
 				</button>
 			</div>

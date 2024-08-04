@@ -21,6 +21,8 @@ import Customers from "./Components/Customers.js";
 import AddCar from "./Components/AddCar.js";
 import AddMaintenance from "./Components/AddMaintenance.js";
 import AddReservation from "./Components/AddReservation.js";
+import Employee from "./Components/Employee.js";
+import EmployeeSalary from "./Components/EmployeeSalary.js";
 
 const AppRouter = () => {
 	return (
@@ -35,9 +37,11 @@ const AppRouter = () => {
 				<Route path="/customers" element={<CustomerList />} />
 				<Route path="/" element={<Home />} />
 				<Route path="/cars" element={<Cars />} />
+				<Route path="/employee" element={<Employee />} />
 				<Route path="/branches" element={<Branches />} />
 				<Route path="/addUser" element={<AddUser />} />
 				<Route path="/addBranch" element={<AddBranch />} />
+				<Route path="/employeeSalary" element={<EmployeeSalary />} />
 				<Route path="/addLoan" element={<AddLoan />} />
 				<Route path="/addCustomer" element={<Customers />} />
 				<Route path="/addCar" element={<AddCar />} />
