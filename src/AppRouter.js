@@ -23,6 +23,8 @@ import AddMaintenance from "./Components/AddMaintenance.js";
 import AddReservation from "./Components/AddReservation.js";
 import Employee from "./Components/Employee.js";
 import EmployeeSalary from "./Components/EmployeeSalary.js";
+import AddEmployee from "./Components/AddEmployee.js";
+import AddEmployeeSalary from "./Components/AddEmployeeSalary.js";
 
 const AppRouter = () => {
 	return (
@@ -42,10 +44,12 @@ const AppRouter = () => {
 				<Route path="/addUser" element={<AddUser />} />
 				<Route path="/addBranch" element={<AddBranch />} />
 				<Route path="/employeeSalary" element={<EmployeeSalary />} />
+				<Route path="/addEmployeeSalary" element={<AddEmployeeSalary />} />
 				<Route path="/addLoan" element={<AddLoan />} />
 				<Route path="/addCustomer" element={<Customers />} />
 				<Route path="/addCar" element={<AddCar />} />
 				<Route path="/maintenance" element={<Maintenance />} />
+				<Route path="/addEmployee" element={<AddEmployee />} />
 				<Route path="/addMaintenance" element={<AddMaintenance />} />
 				<Route path="/addReservation" element={<AddReservation />} />
 				<Route path="/reservation" element={<Reservation />} />

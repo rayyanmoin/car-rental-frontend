@@ -12,12 +12,7 @@ const Navbar = () => {
 				<li>
 					<Link to="/">Home</Link>
 				</li>
-				<li>
-					<Link to="/employee">Employee</Link>
-				</li>
-				<li>
-					<Link to="/employeeSalary">Employee Salary</Link>
-				</li>
+
 				<li>
 					<Link to="/customers">Customers</Link>
 				</li>
@@ -34,6 +29,12 @@ const Navbar = () => {
 					<Link to="/reservation">Reservation</Link>
 				</li>
 				<li>
+					<Link to="/employee">Employee</Link>
+				</li>
+				<li>
+					<Link to="/employeeSalary">Employee Salary</Link>
+				</li>
+				<li>
 					<Link to="/addCar">Add Car</Link>
 				</li>
 				<li>
@@ -47,6 +48,12 @@ const Navbar = () => {
 				</li>
 				<li>
 					<Link to="/addCustomer">Add Customer</Link>
+				</li>
+				<li>
+					<Link to="/addEmployee">Add Employee</Link>
+				</li>
+				<li>
+					<Link to="/addEmployeeSalary">Add Employee Salary</Link>
 				</li>
 			</ul>
 		</nav>
