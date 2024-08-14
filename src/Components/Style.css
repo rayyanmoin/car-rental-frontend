@@ -139,7 +139,8 @@ select:focus {
 
 .form-groups input[type="text"] {
     width: 35%;
-    padding: 10px;
+    padding: 9px;
+    margin-right: 0px;
     border: 1px solid #cccccc;
     border-radius: 4px;
     font-size: 14px;

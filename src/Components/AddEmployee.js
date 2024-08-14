@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./AddUser.css";
+import "./Style.css";
 
 export const AddEmployee = () => {
 	const [employeeData, setEmployeeData] = useState({

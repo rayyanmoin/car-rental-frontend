@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./AddUser.css";
+import "./Style.css";
 
 export const AddCar = () => {
 	const [carData, setCarData] = useState({
@@ -85,11 +85,11 @@ export const AddCar = () => {
 
 	return (
 		<div>
-			<div className="cards">
+			<div className="card">
 				<h2>Create Car</h2>
 
-				<div className="form-groups">
-					<label htmlFor="branchId" class="requireds">
+				<div className="form-group">
+					<label htmlFor="branchId" class="required">
 						Branch Names
 					</label>
 					<select id="statusOption" name="branchId" value={replaceBranchWithId(carData.branchId)} onChange={handleInputChange}>
@@ -101,44 +101,44 @@ export const AddCar = () => {
 						))}
 					</select>
 				</div>
-				<div className="form-groups">
-					<label htmlFor="make" class="requireds">
+				<div className="form-group">
+					<label htmlFor="make" class="required">
 						Make
 					</label>
 					<input type="text" id="make" name="make" value={carData.make} onChange={handleInputChange} />
 				</div>
-				<div className="form-groups">
-					<label htmlFor="model" class="requireds">
+				<div className="form-group">
+					<label htmlFor="model" class="required">
 						Model
 					</label>
 					<input type="text" id="model" name="model" value={carData.model} onChange={handleInputChange} />
 				</div>
-				<div className="form-groups">
-					<label htmlFor="year" class="requireds">
+				<div className="form-group">
+					<label htmlFor="year" class="required">
 						Year
 					</label>
 					<input type="text" id="year" name="year" value={carData.year} onChange={handleInputChange} />
 				</div>
-				<div className="form-groups">
-					<label htmlFor="color" class="requireds">
+				<div className="form-group">
+					<label htmlFor="color" class="required">
 						Color
 					</label>
 					<input type="text" id="color" name="color" value={carData.color} onChange={handleInputChange} />
 				</div>
-				<div className="form-groups">
-					<label htmlFor="licensePlate" class="requireds">
+				<div className="form-group">
+					<label htmlFor="licensePlate" class="required">
 						License Plate
 					</label>
 					<input type="text" id="licensePlate" name="licensePlate" value={carData.licensePlate} onChange={handleInputChange} />
 				</div>
-				<div className="form-groups">
-					<label htmlFor="dailyRentalRate" class="requireds">
+				<div className="form-group">
+					<label htmlFor="dailyRentalRate" class="required">
 						daily Rental Rate
 					</label>
 					<input type="text" id="dailyRentalRate" name="dailyRentalRate" value={carData.dailyRentalRate} onChange={handleInputChange} />
 				</div>
-				<div className="form-groups">
-					<label htmlFor="status" className="requireds">
+				<div className="form-group">
+					<label htmlFor="status" className="required">
 						Status
 					</label>
 					<select id="statusOption" name="status" value={carData.status} onChange={handleInputChange}>
@@ -151,7 +151,7 @@ export const AddCar = () => {
 					</select>
 				</div>
 
-				<button className="submitBtns" type="submit" onClick={AddCar}>
+				<button className="submitBtn" type="submit" onClick={AddCar}>
 					Create Car
 				</button>
 			</div>

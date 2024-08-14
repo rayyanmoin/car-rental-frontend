@@ -3,7 +3,7 @@
 
 nav {
     background-color: rgba(54, 88, 110, 0.808);
-    padding: 6px;
+    padding: 3px;
     font-family: 'Arial', cursive;
   }
   
@@ -15,10 +15,10 @@ nav {
   }
   
   li {
-    margin-right: 20px;
+    margin-right: 10px;
     font-family: 'Arial', cursive;
-    font-size: 10px;
-    padding: 10px;
+    font-size: 13.5px;
+    padding: 9px;
   }
   
   a {

@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./AddUser.css";
+import "./Style.css";
 
 const Customers = () => {
 	const [customerData, setCustomerData] = useState({
@@ -90,7 +90,7 @@ const Customers = () => {
 					<input type="text" id="address" name="address" value={customerData.address} onChange={handleInputChange} />
 				</div>
 				<button className="submitBtn" type="submit" onClick={addCustomer}>
-					Create Branch
+					Create Customer
 				</button>
 			</div>
 		</div>
