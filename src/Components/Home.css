@@ -32,7 +32,7 @@ body {
 body {
     background-color: rgba(54, 88, 110, 0.808);
     font-family: 'Arial', cursive;
-    background-image: url('../../public/img.jpg');
+    background-image: url('../../public/images.jpg');
 
     background-size: 100%;
 }
