@@ -32,7 +32,11 @@ body {
 body {
     background-color: rgba(54, 88, 110, 0.808);
     font-family: 'Arial', cursive;
-    background-image: url('../../public/saim-image.jpg');
+
+    background-image: url('../../public/Car.jpg');
+
+
+
 
     background-size: 100%;
 }
